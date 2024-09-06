@@ -32,7 +32,7 @@ const ENV: string = process.env.NODE_ENV;
     AuthModule,
     UserModule,
     ContactModule,
-    // TasksModule,
+    TasksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
