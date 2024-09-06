@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ContactService } from './contact.service';
-import { ContactController } from './Contact.controller';
 import { Contact, ContactSchema } from './contact.schema';
 import { ContactRepository } from './contact.repository';
+import { ContactController } from './contact.controller';
 
 @Module({
   imports: [
