@@ -6,13 +6,11 @@ import { UserModule } from './user/user.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { ContactModule } from './contact/contact.module';
-import { TasksModule } from './task/tasks.module';
-const ENV: string = process.env.NODE_ENV;
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: [ENV === 'production' ? '.env.prod' : `.env`],
+      envFilePath: [`.env`],
       expandVariables: true,
     }),
     ConfigModule,
@@ -32,7 +30,7 @@ const ENV: string = process.env.NODE_ENV;
     AuthModule,
     UserModule,
     ContactModule,
-    TasksModule,
+    // TasksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
